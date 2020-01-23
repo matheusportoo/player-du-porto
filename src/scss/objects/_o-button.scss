@@ -1,0 +1,33 @@
+.o-button {
+  font-size: 14px;
+  padding: 12px;
+  border: 2px solid $color-amaranth;
+  border-radius: 8px;
+  display: inline-block;
+  color: $color-amaranth;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    background-color: $color-amaranth;
+    margin-left: 5px;
+    margin-top: -3px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  &:hover {
+    background-color: $color-amaranth;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+}

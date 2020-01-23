@@ -1,0 +1,76 @@
+.c-music-list {
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    padding: 0 10px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: rgba($color-mercury, 0.5);
+    }
+  }
+
+  &__cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__cover-pic { width: 100%; }
+
+  &__track {
+    width: calc(100% - 60px);
+    position: relative;
+    margin-left: 10px;
+    padding: 14px 0;
+    border-top: 1px solid $color-mercury;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__track-name {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $color-cod-gray;
+    font-size: 16px;
+    padding-right: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__track-artist {
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: $color-gray;
+    font-size: 14px;
+  }
+
+  &__track-time {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $color-gray;
+    font-size: 14px;
+  }
+}
+
+@include respond-to(desktop) {
+  &__cover {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__track {
+    width: calc(100% - 60px);
+  }
+}

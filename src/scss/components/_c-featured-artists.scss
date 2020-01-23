@@ -1,0 +1,66 @@
+.c-featured-artists {
+  margin-top: 60px;
+
+  &__title {
+    font-size: 26px;
+    padding-top: 30px;
+    margin-bottom: 0;
+    border-top: 1px solid $color-mercury;
+    margin-top: 0;
+  }
+
+  &__list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__list-item {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    flex-basis: 50%;
+    padding: 5px;
+  }
+
+  &__list-item-pic {
+    border-radius: 50%;
+    width: 100%;
+  }
+
+  &__name {
+    color: $color-cod-gray;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  &__category {
+    color: $color-gray;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-top: 0;
+  }
+}
+
+@include respond-to(desktop) {
+  .c-featured-artists {
+    margin-top: 60px;
+
+    &__wrap {
+      margin-left: (190 * 100% / 1920);
+      margin-right: (190 * 100% / 1920);
+    }
+
+    &__list-item {
+      flex-basis: 25%;
+    }
+
+    &__list-item-pic {
+      max-width: 100%;
+      width: auto;
+    }
+  }
+}

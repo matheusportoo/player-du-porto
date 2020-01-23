@@ -1,0 +1,108 @@
+.c-artist-highlight {
+  &__cover {
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+    margin-bottom: 30px;
+  }
+
+  &__cover-wrap {
+    height: 0;
+    width: 100%;
+    padding-top: 50.8%;
+    position: relative;
+  }
+
+  &__cover-pic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__name {
+    font-size: 30px;
+    font-weight: $font-weight-bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $color-black;
+  }
+
+  &__description {
+    line-height: 1.4;
+    font-size: 16px;
+    color: $color-cod-gray;
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+
+  &__bt-listen-on-apple-music { margin-top: 30px; }
+
+  &__info {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
+  &__info-key {
+    text-transform: uppercase;
+    color: $color-gray;
+    font-size: 12px;
+    display: block;
+    padding-top: 10px;
+    border-top: 1px solid $color-mercury
+  }
+
+  &__info-value {
+    font-size: 14px;
+    color: $color-cod-gray;
+    margin-top: 5px;
+    display: block;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@include respond-to(desktop) {
+  .c-artist-highlight {
+    &__cover {
+      margin-left: -($gutter * 6);
+      margin-right: -($gutter * 6);
+      margin-bottom: 65px;
+    }
+
+    &__cover-wrap {
+      padding-top: 26.5%;
+    }
+
+    &__name {
+      font-size: 40px;
+    }
+
+    &__about {
+      width: 75%;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    &__info {
+      width: 25%;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 75px;
+      margin-bottom: 0;
+    }
+
+    &__info-key {
+      font-size: 14px;
+      padding-top: 15px;
+    }
+
+    &__info-value {
+      font-size: 16px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+  }
+}

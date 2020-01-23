@@ -1,0 +1,25 @@
+$gutter: 20px;
+
+@mixin site-limit() {
+  width: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  position: relative;
+
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+
+  @include respond-to(desktop) {
+    margin-left: ($gutter * 6);
+    margin-right: ($gutter * 6);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.t-container {
+  @include site-limit;
+}

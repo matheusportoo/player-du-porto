@@ -1,0 +1,9 @@
+.t-hidden {
+  &-mb { display: none; }
+  &-lg { display: block; }
+
+  @include respond-to(desktop) {
+    &-mb { display: block; }
+    &-lg { display: none; }
+  }
+}

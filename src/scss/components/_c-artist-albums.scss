@@ -1,0 +1,100 @@
+.c-artist-albums {
+  margin-top: 30px;
+
+  &__cover {
+    max-width: 40%;
+    display: block;
+  }
+
+  &__cover-pic {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  &__album-name {
+    width: 55%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5%;
+    position: absolute;
+    left: 40%;
+    top: 0;
+    padding-right: $gutter;
+    font-size: 6.5vw;
+  }
+
+  &__bt-listen-on-apple-music {
+    margin-top: 30px;
+  }
+
+  &__info {
+    margin-top: 20px;
+  }
+
+  &__info-title {
+    padding-top: 20px;
+    border-top: 1px solid $color-mercury;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $color-cod-gray;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__info-desc {
+    font-size: 16px;
+    line-height: 1.4;
+    color: $color-cod-gray;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  &__music-list {
+    margin-top: 30px;
+  }
+}
+
+
+@include respond-to(desktop) {
+  .c-artist-albums {
+    position: relative;
+    margin-top: 70px;
+
+    &__album-name {
+      position: static;
+      left: auto;
+      top: auto;
+      margin-left: 0;
+      display: block;
+      margin-bottom: 0;
+      padding-right: 0;
+      font-size: 26px;
+    }
+
+    &__album {
+      margin-left: (190 * 100% / 1920);
+      margin-right: (190 * 100% / 1920);
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__cover {
+      flex-basis: 30%;
+      max-width: none;
+    }
+
+    &__cover-pic {
+      max-width: none;
+    }
+
+    &__details {
+      flex-basis: 70%;
+      padding-left: 10%;
+    }
+
+    &__number-songs {
+      font-size: 14px;
+      color: $color-gray;
+    }
+  }
+}
